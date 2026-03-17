@@ -1,5 +1,23 @@
 <!DOCTYPE html>
 <html>
-<head><meta charset="UTF-8"/><title>Blog APdS</title></head>
-<body><h1>Blog in arrivo</h1></body>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>A Prova di Stress — Blog</title>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+<script>
+if (window.netlifyIdentity) {
+  window.netlifyIdentity.on("init", user => {
+    if (!user) {
+      window.netlifyIdentity.on("login", () => {
+        document.location.href = "/admin/";
+      });
+    }
+  });
+}
+</script>
+<h1>Blog in arrivo</h1>
+</body>
 </html>
